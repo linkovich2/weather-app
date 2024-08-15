@@ -1,5 +1,5 @@
 class ParseAddressForZipCode
-  class NoZipFound < Exception; end
+  class NoZipFoundError < Exception; end
 
   attr_accessor :address
 
@@ -16,6 +16,6 @@ class ParseAddressForZipCode
   def process
     regex = /^\d{5}-\d{4}|\d{5}|[A-Z]\d[A-Z] \d[A-Z]\d$/
     return regex.match(address)[0] if regex.match?(address)
-    raise NoZipFound
+    raise NoZipFoundError
   end
 end

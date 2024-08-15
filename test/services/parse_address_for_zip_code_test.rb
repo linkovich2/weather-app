@@ -18,4 +18,13 @@ class ParseAddressForZipCodeTest < ActiveSupport::TestCase
 
     mock.verify
   end
+
+  test "when no zip is found it should raise an error" do
+    address = "1 Street, City, State"
+    instance = ParseAddressForZipCode.new(address)
+    
+    assert_raises ParseAddressForZipCode::NoZipFoundError do
+      ParseAddressForZipCode.process(address)
+    end
+  end
 end
