@@ -29,7 +29,7 @@ class GetWeatherReportTest < ActiveSupport::TestCase
     GetWeatherReport.stub(:new, mock) do
       assert GetWeatherReport.process(zip)
     end
-    
+
     mock.verify
   end
 end
