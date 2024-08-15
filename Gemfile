@@ -57,3 +57,7 @@ group :test do
 end
 
 gem "dalli", "~> 3.2"
+
+gem "httparty", "~> 0.22.0"
+
+gem "webmock", "~> 3.23"

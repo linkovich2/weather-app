@@ -16,17 +16,11 @@ class GetWeatherReport
   def process
     result = Rails.cache.read(zip_code)
     unless result.present?
-      result = weather_report
-      cached_result = weather_report + { cached_at: DateTime.now }
+      result = WeatherReportGenerator.generate(zip_code)
+      cached_result = result.to_h.merge({ cached_at: DateTime.now })
       Rails.cache.write(zip_code, cached_result, expires_in: 30.minutes)
     end
 
-    result
-  end
-
-  private
-
-  def weather_report
-    # actually do the call to the weather API
+    WeatherReportPresenter.new result
   end
 end
