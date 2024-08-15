@@ -7,6 +7,7 @@ class WeatherReportsController < ApplicationController
   end
 
   def create
-    # this needs to process the form, get the zip and redirect to #show with id = zip
+    zip = ParseAddressForZipCode.process(params[:address])
+    redirect_to action: :show, id: zip
   end
 end
