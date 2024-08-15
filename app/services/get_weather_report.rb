@@ -10,7 +10,7 @@ class GetWeatherReport
   end
 
   # handle caching of weather responses
-  # this is unfortunately preferable to `cache_action` or `cache_page` in the controller due to 
+  # this is unfortunately preferable to `cache_action` or `cache_page` in the controller due to
   # a lack of ability to see whether those results are cached for display purposes
   # (at least idiomatically)
   def process
