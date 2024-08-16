@@ -18,7 +18,7 @@ No database should be needed.
 
 I've gone ahead and committed the master.key, which would generally not be good obviously, but in this case it's the easiest way to share it with your team, and API access for these credentials is free anyway.
 
-Then just pull down the repo, `rails s` and navigate to localhost:3000 as usual.
+Then just pull down the repo, `rails s` and navigate to localhost:3000 as usual. Running tests locally (`rails test`) will generate a coverage report. Last run it was at 97.7% coverage.
 
 You should be able to submit any address and be shown a page with weather information.
 
