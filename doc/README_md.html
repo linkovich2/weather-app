@@ -67,6 +67,7 @@
               <ul class="link-list" role="directory">
                           <li>      <a href="#label-Forward">Forward</a>
           <li>      <a href="#label-Running+the+Application">Running the Application</a>
+          <li>      <a href="#label-Possible+Improvements">Possible Improvements</a>
 
               </ul>
             </details>
@@ -90,7 +91,7 @@
     <li><details><summary>app</summary>
     <ul class="link-list">
       <li><a href="./app/assets/config/manifest_js.html">manifest.js</a>
-      <li><a href="./app/assets/stylesheets/application_css.html">application.css</a>
+      <li><a href="./app/assets/stylesheets/application_scss.html">application.scss</a>
       <li><a href="./app/javascript/application_js.html">application.js</a>
       <li><a href="./app/javascript/controllers/application_js.html">application.js</a>
       <li><a href="./app/javascript/controllers/hello_controller_js.html">hello_controller.js</a>
@@ -135,9 +136,9 @@
 
 <h3 id="label-Forward">Forward<span><a href="#label-Forward">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<p>Hi ya’ll! My name is Jonathon Harrell, and this is my Weather App Project for you guys to peruse. I’ve been working in a highly customized Rails 5 environment for some time, so I decided to go with what’s out of the box in Rails 7 for this. I am more comfortable in RSpec by far than I am in Minitest, but I decided to stick with Minitest for this project.</p>
+<p>Hi ya’ll! My name is Jonathon Harrell, and this is my Weather App Project for you guys to peruse. I’ve been working in a highly customized Rails 5 environment for some time, so I decided to go with what’s out of the box in Rails 7 for this. I am more comfortable in RSpec by far than I am in Minitest, but I decided to stick with Minitest for this project. I’m used to Foundation on the frontend but chose to go with Bootstrap for this project, just to shake things up a bit.</p>
 
-<p>I demonstrate use of some common design patterns here, such as presenters and service patterns. Services typically represent a single task, and the presenter is there for display logic that shouldn’t be present in a view. I also chose to adhere to REST for the urls. And for caching I implemented memcached and chose to omit the database, since there isn’t much need for one in this application.</p>
+<p>I demonstrate use of some common design patterns here, such as presenters/decorators and service patterns. Services typically represent a single task, and the presenter is there for display logic that shouldn’t be clogging up a view. I also chose to adhere to REST for the urls. And for caching I implemented memcached and chose to omit the database, since there isn’t much need for one in this application.</p>
 
 <p>I want to note that I would have used Apple’s weatherkit API, but I was having some trouble signing up for a developer account, so I went with some free/open APIs.</p>
 
@@ -149,9 +150,15 @@
 
 <p>No database should be needed.</p>
 
+<p>I’ve gone ahead and committed the master.key, which would generally not be good obviously, but in this case it’s the easiest way to share it with your team, and API access for these credentials is free anyway.</p>
+
 <p>Then just pull down the repo, <code>rails s</code> and navigate to localhost:3000 as usual.</p>
 
 <p>You should be able to submit any address and be shown a page with weather information.</p>
+
+<h3 id="label-Possible+Improvements">Possible Improvements<span><a href="#label-Possible+Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>The app could use more error handling/logging. The database is unimplemented but sessions are being stored so postgres could/should be included. Docker could be utilized to make dev environment setup easier. Timezones could be dynamic rather than statically using central. Presentation could use an overhaul - it’d be nice to present the weather as a graph over time.</p>
 
 </main>
 

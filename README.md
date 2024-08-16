@@ -16,8 +16,11 @@ You'll need memcached running locally:
 
 No database should be needed.
 
-I've gone ahead and committed the master.key, which would generally be not good obviously, but in this case it's the easiest way to share it with your team, and API access for these credentials is free anyway.
+I've gone ahead and committed the master.key, which would generally not be good obviously, but in this case it's the easiest way to share it with your team, and API access for these credentials is free anyway.
 
 Then just pull down the repo, `rails s` and navigate to localhost:3000 as usual.
 
 You should be able to submit any address and be shown a page with weather information.
+
+### Possible Improvements
+The app could use more error handling/logging. The database is unimplemented but sessions are being stored so postgres could/should be included. Docker could be utilized to make dev environment setup easier. Timezones could be dynamic rather than statically using central. Presentation could use an overhaul - it'd be nice to present the weather as a graph over time.

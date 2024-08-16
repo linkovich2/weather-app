@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index.js - RDoc Documentation</title>
+<title>application.scss - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../../";
@@ -108,15 +108,26 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page app/javascript/controllers/index.js">
+<main role="main" aria-label="Page app/assets/stylesheets/application.scss">
 
-<p>// Import and register all your controllers from the importmap under controllers/*</p>
+<p>/*</p>
 
-<p>import { application } from “controllers/application”</p>
+<pre>* This is a manifest file that&#39;ll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin&#39;s
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You&#39;re free to add application-wide styles to this file and they&#39;ll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
-<p>// Eager load all controllers defined in the import map under controllers/<strong>*/</strong>_controller import { eagerLoadControllersFrom } from “@hotwired/stimulus-loading” eagerLoadControllersFrom(“controllers”, application)</p>
-
-<p>// Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!) // import { lazyLoadControllersFrom } from “@hotwired/stimulus-loading” // lazyLoadControllersFrom(“controllers”, application)</p>
+@import &quot;bootstrap&quot;;</pre>
 
 </main>
 

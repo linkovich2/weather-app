@@ -261,7 +261,7 @@
             <pre><span class="ruby-comment"># File app/lib/weather_report_generator.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">open_meteo_url</span>
   <span class="ruby-comment"># potential improvement: time zone could/should be dynamic</span>
-  <span class="ruby-node">&quot;https://api.open-meteo.com/v1/forecast?latitude=#{latitude}&amp;longitude=#{longitude}&amp;hourly=precipitation_probability,cloud_cover,temperature_120m&amp;timezone=America%2FChicago&quot;</span>
+  <span class="ruby-node">&quot;https://api.open-meteo.com/v1/forecast?latitude=#{latitude}&amp;longitude=#{longitude}&amp;hourly=precipitation_probability,cloud_cover,temperature_120m&amp;timezone=America%2FChicago&amp;temperature_unit=fahrenheit&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
         </div>

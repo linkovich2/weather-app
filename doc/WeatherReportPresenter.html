@@ -74,6 +74,11 @@
   <ul class="link-list" role="directory">
     <li ><a href="#method-c-new">::new</a>
     <li ><a href="#method-i-cached-3F">#cached?</a>
+    <li ><a href="#method-i-cached_at">#cached_at</a>
+    <li ><a href="#method-i-cloud_coverage">#cloud_coverage</a>
+    <li ><a href="#method-i-high">#high</a>
+    <li ><a href="#method-i-low">#low</a>
+    <li ><a href="#method-i-weather_blocks">#weather_blocks</a>
   </ul>
 </div>
 
@@ -163,7 +168,140 @@
           <div class="method-source-code" id="cached-3F-source">
             <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cached?</span>
-  <span class="ruby-identifier">weather_report</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;cached_at&quot;</span>)
+  <span class="ruby-identifier">weather_report</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:cached_at</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-cached_at" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">cached_at</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>returns human readable time of caching</p>
+
+          <div class="method-source-code" id="cached_at-source">
+            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cached_at</span>
+  <span class="ruby-identifier">weather_report</span>[<span class="ruby-value">:cached_at</span>].<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%l:%M%P %B %d, %Y Central Time&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-cloud_coverage" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">cloud_coverage</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>gets human-readable cloud coverage for a given index</p>
+
+          <div class="method-source-code" id="cloud_coverage-source">
+            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cloud_coverage</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">coverage</span> = <span class="ruby-identifier">weather_report</span>[<span class="ruby-string">&quot;hourly&quot;</span>][<span class="ruby-string">&quot;cloud_cover&quot;</span>][<span class="ruby-identifier">index</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">coverage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">80</span>
+    <span class="ruby-string">&quot;Cloudy&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">coverage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">40</span>
+    <span class="ruby-string">&quot;Partly Cloudy&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">coverage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>
+    <span class="ruby-string">&quot;Some Clouds&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-string">&quot;Clear Skies&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-high" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">high</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>returns the highest temperature in the set</p>
+
+          <div class="method-source-code" id="high-source">
+            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">high</span>
+  <span class="ruby-identifier">weather_report</span>[<span class="ruby-string">&quot;hourly&quot;</span>][<span class="ruby-string">&quot;temperature_120m&quot;</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-low" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">low</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>returns the lowest temperature in the set</p>
+
+          <div class="method-source-code" id="low-source">
+            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">low</span>
+  <span class="ruby-identifier">weather_report</span>[<span class="ruby-string">&quot;hourly&quot;</span>][<span class="ruby-string">&quot;temperature_120m&quot;</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-weather_blocks" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">weather_blocks</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>gets a hash of weather information for a given index</p>
+
+          <div class="method-source-code" id="weather_blocks-source">
+            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">weather_blocks</span>
+  <span class="ruby-ivar">@weather_blocks</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arr</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">weather_report</span>[<span class="ruby-string">&quot;hourly&quot;</span>][<span class="ruby-string">&quot;time&quot;</span>].<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">time</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> { 
+        <span class="ruby-value">time:</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">time</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%_m/%d %l:%M%P&quot;</span>),
+        <span class="ruby-value">cloud_coverage:</span> <span class="ruby-identifier">cloud_coverage</span>(<span class="ruby-identifier">index</span>),
+        <span class="ruby-value">precipitation_probability:</span> <span class="ruby-node">&quot;#{weather_report[&quot;hourly&quot;][&quot;precipitation_probability&quot;][index]}%&quot;</span>,
+        <span class="ruby-value">temperature:</span> <span class="ruby-node">&quot;#{weather_report[&quot;hourly&quot;][&quot;temperature_120m&quot;][index]}°f&quot;</span>
+      }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
         </div>

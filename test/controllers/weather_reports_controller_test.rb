@@ -8,7 +8,7 @@ class WeatherReportsControllerTest < ActionDispatch::IntegrationTest
 
   test "#show shows the weather report for a given zip" do
     mock = Minitest::Mock.new
-    mock.expect(:process, WeatherReportPresenter.new({}))
+    mock.expect(:process, WeatherReportPresenter.new(meteo_report.deep_stringify_keys))
 
     GetWeatherReport.stub(:new, mock) do
       get weather_report_path(78412)

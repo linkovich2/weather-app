@@ -69,7 +69,7 @@
     <li><details><summary>app</summary>
     <ul class="link-list">
       <li><a href="../app/assets/config/manifest_js.html">manifest.js</a>
-      <li><a href="../app/assets/stylesheets/application_css.html">application.css</a>
+      <li><a href="../app/assets/stylesheets/application_scss.html">application.scss</a>
       <li><a href="../app/javascript/application_js.html">application.js</a>
       <li><a href="../app/javascript/controllers/application_js.html">application.js</a>
       <li><a href="../app/javascript/controllers/hello_controller_js.html">hello_controller.js</a>
@@ -6613,6 +6613,1485 @@ Rendered layout layouts/application.html.erb (Duration: 0.3ms | GC: 0.0ms)</pre>
 <hr>
 
 <p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 19:40:19 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.2ms)
+Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.2ms)</pre>
+
+<p>Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:40:19 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 48.7ms | GC: 25.1ms)</pre>
+
+<p>Completed 200 OK in 49ms (Views: 49.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 25.4ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:40:19 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:41:13 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:41:13 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.2ms)
+Rendered layout layouts/application.html.erb (Duration: 49.3ms | GC: 25.7ms)</pre>
+
+<p>Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 25.9ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:41:49 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.2ms)
+Rendered layout layouts/application.html.erb (Duration: 49.3ms | GC: 24.6ms)</pre>
+
+<p>Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 24.9ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:41:49 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:41:52 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 36.0ms | GC: 11.0ms)</pre>
+
+<p>Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 11.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:41:52 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:42:45 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 50.6ms | GC: 25.9ms)</pre>
+
+<p>Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 26.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 19:42:45 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.2ms)
+Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.2ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:42:45 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:44:20 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:44:20 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 36.6ms | GC: 11.4ms)</pre>
+
+<p>Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 11.4ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 19:44:20 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:44:36 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:44:36 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 36.6ms | GC: 11.0ms)</pre>
+
+<p>Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 11.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:45:00 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 49.0ms | GC: 25.1ms)</pre>
+
+<p>Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 25.6ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:45:00 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 19:45:00 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:45:03 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 49.4ms | GC: 25.8ms)</pre>
+
+<p>Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 26.3ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 19:45:03 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:45:03 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 19:45:13 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 50.2ms | GC: 25.7ms)</pre>
+
+<p>Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 26.3ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 19:45:13 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.1ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 19:45:13 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 20:29:06 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.2ms)
+Rendered layout layouts/application.html.erb (Duration: 2239.5ms | GC: 78.6ms)</pre>
+
+<p>Completed 200 OK in 2243ms (Views: 2240.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 78.8ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 20:29:08 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.6ms)
+Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 1.6ms)</pre>
+
+<p>Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.1ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_with_a_bad_address_redirects_to_index_with_flash</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 20:29:08 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;no zip here buddy&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports">www.example.com/weather_reports</a> Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 20:29:08 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 20:41:57 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.3ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 20:41:57 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.3ms)
+Rendered layout layouts/application.html.erb (Duration: 1104.7ms | GC: 42.1ms)</pre>
+
+<p>Completed 200 OK in 1112ms (Views: 1107.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 43.6ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_with_a_bad_address_redirects_to_index_with_flash</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 20:41:58 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;no zip here buddy&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports">www.example.com/weather_reports</a> Completed 302 Found in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 20:41:58 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? ORDER BY &quot;ar_internal_metadata&quot;.&quot;key&quot; ASC LIMIT 1[0m  [[nil, &quot;schema_sha1&quot;]]
+[1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_#process_takes_the_given_address_and_returns_the_zip</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>ParseAddressForZipCodeTest: test_when_no_zip_is_found_it_should_raise_an_error</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#show_shows_the_weather_report_for_a_given_zip</p>
+<hr>
+
+<p>Started GET “/weather_reports/78412” for 127.0.0.1 at 2024-08-15 21:39:03 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;78412&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 1.8ms | GC: 1.2ms)
+Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 1.2ms)</pre>
+
+<p>Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 4.3ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_parses_the_address_for_a_zip_code_and_redirects_to_#show</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 21:39:03 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;1234 Avenue Lane, Cool City, State, 75081&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports/75081">www.example.com/weather_reports/75081</a> Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#create_with_a_bad_address_redirects_to_index_with_flash</p>
+<hr>
+
+<p>Started POST “/weather_reports” for 127.0.0.1 at 2024-08-15 21:39:03 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;address&quot;=&gt;&quot;no zip here buddy&quot;}</pre>
+
+<p>Redirected to <a href="http://www.example.com/weather_reports">www.example.com/weather_reports</a> Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportsControllerTest: test_#index_shows_the_weather_report_address_form</p>
+<hr>
+
+<p>Started GET “/weather_reports” for 127.0.0.1 at 2024-08-15 21:39:03 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.9ms)
+Rendered layout layouts/application.html.erb (Duration: 953.4ms | GC: 29.2ms)</pre>
+
+<p>Completed 200 OK in 954ms (Views: 953.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 29.2ms)</p>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_self.process_creates_a_new_instance_and_calls_#process_on_it</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>GetWeatherReportTest: test_#process_either_uses_the_cached_weather_report_or_grabs_a_fresh_one_from_the_lib</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#generate_pulls_a_new_weather_report_from_open-meteo’s_API</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_#geocode!<em>fills_out_the_latitude</em>/_longitude</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportGeneratorTest: test_self.generate_creates_a_new_instance_and_calls_#generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>RoutingTest: test_weather_report_routes_generate</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportPresenterTest: test_#weather_blocks_creates_blocks_of_weather_info_for_the_report</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportPresenterTest: test_#cached?_returns_true_when_the_report_has_a_cached_at</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportPresenterTest: test_#cloud_coverage_gets_human_readable_cloud_coverage_strings</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportPresenterTest: test_#low_returns_lowest_temperature</p>
+<hr>
+
+<pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WeatherReportPresenterTest: test_#high_returns_highest_temperature</p>
 <hr>
 
 <pre>[1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m</pre>

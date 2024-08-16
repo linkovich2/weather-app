@@ -1,5 +1,20 @@
-<p><%=@report.inspect %></p>
+<p>
+  <strong>7-day High</strong>: <%= @report.high %>°f
+  <br/>
+  <strong>7-day Low</strong>: <%= @report.low %>°f
+</p>
+
+<ul class="list-group">
+  <% @report.weather_blocks.each do |block| %>
+    <li class="list-group-item">
+      <strong><%= block[:time] %></strong>:
+      <%= block[:temperature] %>, <%= block[:precipitation_probability] %> Precipitation, <%= block[:cloud_coverage] %>
+    </li>
+  <% end %>
+</ul>
+
+<br/>
 
 <% if @report.cached? %>
-  <p class="muted">Showing Cached Report From: <%= @report.cached_at %></p>
+  <p class="text-muted"><em>Showing Cached Report From: <%= @report.cached_at %></em></p>
 <% end %>
