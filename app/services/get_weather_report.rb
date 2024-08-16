@@ -1,3 +1,4 @@
+# handles getting the weather report for a given zip code either from the API or from cache
 class GetWeatherReport
   attr_accessor :zip_code
 
@@ -9,10 +10,7 @@ class GetWeatherReport
     @zip_code = zip_code
   end
 
-  # handle caching of weather responses
-  # this is unfortunately preferable to `cache_action` or `cache_page` in the controller due to
-  # a lack of ability to see whether those results are cached for display purposes
-  # (at least idiomatically)
+  # handles caching of weather responses
   def process
     result = Rails.cache.read(zip_code)
     unless result.present?

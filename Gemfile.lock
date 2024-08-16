@@ -335,6 +335,7 @@ DEPENDENCIES
   jbuilder
   puma (>= 5.0)
   rails (~> 7.2.0.beta2)
+  rdoc (~> 6.7)
   rubocop-rails-omakase
   selenium-webdriver
   sprockets-rails

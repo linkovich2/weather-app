@@ -1,1 +1,5 @@
-<p>hello!</p>
+<%= form_with do |form| %>
+  <%= form.label :address, "Search for:" %>
+  <%= form.text_field :address, placeholder: "1234 Avenue Lane, Cool City, Texas, 90210" %>
+  <%= form.submit "Search" %>
+<% end %>
