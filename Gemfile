@@ -56,13 +56,11 @@ group :test do
   gem "selenium-webdriver"
 end
 
+# these are gems I added for this project
+gem 'simplecov', require: false, group: :test
 gem "dalli", "~> 3.2"
-
 gem "httparty", "~> 0.22.0"
-
 gem "webmock", "~> 3.23"
-
 gem "rdoc", "~> 6.7"
-
 gem "bootstrap", "~> 5.3"
 gem "sassc-rails", "~> 2.1"
