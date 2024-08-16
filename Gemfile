@@ -63,3 +63,6 @@ gem "httparty", "~> 0.22.0"
 gem "webmock", "~> 3.23"
 
 gem "rdoc", "~> 6.7"
+
+gem "bootstrap", "~> 5.3"
+gem "sassc-rails", "~> 2.1"

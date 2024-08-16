@@ -8,12 +8,18 @@ class WeatherReportsControllerTest < ActionDispatch::IntegrationTest
 
   test "#show shows the weather report for a given zip" do
     mock = Minitest::Mock.new
-    mock.expect(:process, nil)
+    mock.expect(:process, WeatherReportPresenter.new({}))
 
     GetWeatherReport.stub(:new, mock) do
       get weather_report_path(78412)
       assert_response :success
     end
+  end
+
+  test "#create with a bad address redirects to index with flash" do
+    post weather_reports_path, params: { address: "no zip here buddy" }
+    assert_redirected_to weather_reports_path
+    assert_equal WeatherReportsController::NO_ZIP_FOUND_MESSAGE, flash[:error]
   end
 
   test "#create parses the address for a zip code and redirects to #show" do

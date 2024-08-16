@@ -1,1 +1,5 @@
 <p><%=@report.inspect %></p>
+
+<% if @report.cached? %>
+  <p class="muted">Showing Cached Report From: <%= @report.cached_at %></p>
+<% end %>

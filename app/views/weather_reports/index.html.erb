@@ -1,5 +1,9 @@
-<%= form_with do |form| %>
-  <%= form.label :address, "Search for:" %>
-  <%= form.text_field :address, placeholder: "1234 Avenue Lane, Cool City, Texas, 90210" %>
-  <%= form.submit "Search" %>
-<% end %>
+<div class="row mt-20">
+  <%= form_with class: "form-inline" do |form| %>
+    <div class="form-group mb-2">
+      <%= form.label :address, "What's your address?" %>
+      <%= form.text_field :address, placeholder: "1234 Avenue Lane, Cool City, Texas, 90210", class: "form-control form-control-lg", required: true %>
+    </div>
+    <%= form.submit "Search", class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+</div>

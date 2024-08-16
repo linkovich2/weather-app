@@ -8,6 +8,10 @@ class WeatherReportPresenter
 
   # returns whether the report is from cache
   def cached?
-    weather_report.has_key?("cached_at")
+    weather_report.has_key?(:cached_at)
+  end
+
+  def cached_at
+    weather_report[:cached_at].strftime("%l:%M %B %d, %Y")
   end
 end
