@@ -11,6 +11,7 @@ class WeatherReportPresenter
     weather_report.has_key?(:cached_at)
   end
 
+  # returns human readable time of caching
   def cached_at
     weather_report[:cached_at].strftime("%l:%M %B %d, %Y")
   end
