@@ -57,7 +57,7 @@ group :test do
 end
 
 # these are gems I added for this project
-gem 'simplecov', require: false, group: :test
+gem "simplecov", require: false, group: :test
 gem "dalli", "~> 3.2"
 gem "httparty", "~> 0.22.0"
 gem "webmock", "~> 3.23"
