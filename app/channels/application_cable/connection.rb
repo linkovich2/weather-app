@@ -1,4 +1,4 @@
-module ApplicationCable #:nodoc:
-  class Connection < ActionCable::Connection::Base #:nodoc:
+module ApplicationCable # :nodoc:
+  class Connection < ActionCable::Connection::Base # :nodoc:
   end
 end

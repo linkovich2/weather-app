@@ -1,2 +1,2 @@
-module ApplicationHelper #:nodoc:
+module ApplicationHelper # :nodoc:
 end
