@@ -49,6 +49,11 @@ class WeatherReportPresenter
     weather_report["hourly"]["temperature_120m"].min
   end
 
+  # returns current temperature
+  def current
+    weather_report["current"]["apparent_temperature"]
+  end
+
   # returns human readable time of caching
   def cached_at
     weather_report[:cached_at].strftime("%l:%M%P %B %d, %Y Central Time")

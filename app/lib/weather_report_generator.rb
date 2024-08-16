@@ -27,7 +27,7 @@ class WeatherReportGenerator
   # returns url of weather API
   def open_meteo_url
     # potential improvement: time zone could/should be dynamic
-    "https://api.open-meteo.com/v1/forecast?latitude=#{latitude}&longitude=#{longitude}&hourly=precipitation_probability,cloud_cover,temperature_120m&timezone=America%2FChicago&temperature_unit=fahrenheit"
+    "https://api.open-meteo.com/v1/forecast?latitude=#{latitude}&longitude=#{longitude}&hourly=precipitation_probability,cloud_cover,temperature_120m&timezone=America%2FChicago&temperature_unit=fahrenheit&current=apparent_temperature"
   end
 
   # returns url of zip code reverse geocode API

@@ -3497,6 +3497,289 @@ Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.2ms)</pre>
 
 <p>Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)</p>
 
+<p>Started GET “/” for ::1 at 2024-08-15 22:01:10 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports">localhost:3000/weather_reports</a> Completed 301 Moved Permanently in 1ms</p>
+
+<p>Started GET “/weather_reports” for ::1 at 2024-08-15 22:01:10 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 73.8ms | GC: 27.6ms)</pre>
+
+<p>Completed 200 OK in 78ms (Views: 74.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 27.6ms)</p>
+
+<p>Started GET “/manifest.json” for ::1 at 2024-08-15 22:01:10 -0500 Processing by Rails::PwaController#manifest as JSON</p>
+
+<pre>Rendering pwa/manifest.json.erb
+Rendered pwa/manifest.json.erb (Duration: 0.2ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started POST “/weather_reports” for ::1 at 2024-08-15 22:01:14 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;[FILTERED]&quot;, &quot;address&quot;=&gt;&quot;1933 Aliso Rd, Plano TX 75074&quot;, &quot;commit&quot;=&gt;&quot;Search&quot;}</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports/75074">localhost:3000/weather_reports/75074</a> Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/weather_reports/75074” for ::1 at 2024-08-15 22:01:14 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;75074&quot;}</pre>
+
+<p>Dalli::Server#connect 127.0.0.1:11211</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 1.8ms | GC: 0.1ms)
+Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.1ms)</pre>
+
+<p>Completed 200 OK in 1020ms (Views: 4.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)</p>
+
+<p>Started GET “/weather_reports/75074” for ::1 at 2024-08-15 22:01:20 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;75074&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/manifest.json” for ::1 at 2024-08-15 22:01:20 -0500 Processing by Rails::PwaController#manifest as JSON</p>
+
+<pre>Rendering pwa/manifest.json.erb
+Rendered pwa/manifest.json.erb (Duration: 0.1ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/” for ::1 at 2024-08-15 22:01:55 -0500 Redirected to <a href="http://localhost:3000/weather_reports">localhost:3000/weather_reports</a> Completed 301 Moved Permanently in 0ms</p>
+
+<p>Started GET “/weather_reports” for ::1 at 2024-08-15 22:01:55 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/” for ::1 at 2024-08-15 22:06:59 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports">localhost:3000/weather_reports</a> Completed 301 Moved Permanently in 1ms</p>
+
+<p>Started GET “/weather_reports” for ::1 at 2024-08-15 22:06:59 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 71.3ms | GC: 28.9ms)</pre>
+
+<p>Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 28.9ms)</p>
+
+<p>Started GET “/manifest.json” for ::1 at 2024-08-15 22:07:00 -0500 Processing by Rails::PwaController#manifest as JSON</p>
+
+<pre>Rendering pwa/manifest.json.erb
+Rendered pwa/manifest.json.erb (Duration: 0.2ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started POST “/weather_reports” for ::1 at 2024-08-15 22:07:02 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;[FILTERED]&quot;, &quot;address&quot;=&gt;&quot;1933 Aliso Rd, Plano TX 75074&quot;, &quot;commit&quot;=&gt;&quot;Search&quot;}</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports/75074">localhost:3000/weather_reports/75074</a> Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)</p>
+
+<p>Started GET “/weather_reports/75074” for ::1 at 2024-08-15 22:07:02 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;75074&quot;}</pre>
+
+<p>Dalli::Server#connect 127.0.0.1:11211</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.1ms)
+Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.1ms)</pre>
+
+<p>Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)</p>
+
+<p>ActionView::Template::Error (undefined method ‘[]’ for nil):</p>
+
+<p>Causes: NoMethodError (undefined method ‘[]’ for nil)</p>
+
+<pre>1: &lt;p&gt;
+2:   &lt;strong&gt;Current Temperature&lt;/strong&gt;: &lt;%= @report.current %&gt;°f
+3:   &lt;br/&gt;
+4:   &lt;strong&gt;7-day High&lt;/strong&gt;: &lt;%= @report.high %&gt;°f
+5:   &lt;br/&gt;</pre>
+
+<p>app/presenters/weather_report_presenter.rb:53:in ‘current’ app/views/weather_reports/show.html.erb:2 Started GET “/” for ::1 at 2024-08-15 22:08:36 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports">localhost:3000/weather_reports</a> Completed 301 Moved Permanently in 1ms</p>
+
+<p>Started GET “/weather_reports” for ::1 at 2024-08-15 22:08:36 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 72.5ms | GC: 29.2ms)</pre>
+
+<p>Completed 200 OK in 77ms (Views: 73.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 29.2ms)</p>
+
+<p>Started GET “/manifest.json” for ::1 at 2024-08-15 22:08:36 -0500 Processing by Rails::PwaController#manifest as JSON</p>
+
+<pre>Rendering pwa/manifest.json.erb
+Rendered pwa/manifest.json.erb (Duration: 0.1ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/” for ::1 at 2024-08-15 22:08:36 -0500 Redirected to <a href="http://localhost:3000/weather_reports">localhost:3000/weather_reports</a> Completed 301 Moved Permanently in 0ms</p>
+
+<p>Started GET “/weather_reports” for ::1 at 2024-08-15 22:08:36 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.1ms)</pre>
+
+<p>Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)</p>
+
+<p>Started POST “/weather_reports” for ::1 at 2024-08-15 22:08:38 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;[FILTERED]&quot;, &quot;address&quot;=&gt;&quot;1933 Aliso Rd, Plano TX 75074&quot;, &quot;commit&quot;=&gt;&quot;Search&quot;}</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports/75074">localhost:3000/weather_reports/75074</a> Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/weather_reports/75074” for ::1 at 2024-08-15 22:08:38 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;75074&quot;}</pre>
+
+<p>Dalli::Server#connect 127.0.0.1:11211</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>ActionView::Template::Error (undefined method ‘[]’ for nil):</p>
+
+<p>Causes: NoMethodError (undefined method ‘[]’ for nil)</p>
+
+<pre>1: &lt;p&gt;
+2:   &lt;strong&gt;Current Temperature&lt;/strong&gt;: &lt;%= @report.current %&gt;°f
+3:   &lt;br/&gt;
+4:   &lt;strong&gt;7-day High&lt;/strong&gt;: &lt;%= @report.high %&gt;°f
+5:   &lt;br/&gt;</pre>
+
+<p>app/presenters/weather_report_presenter.rb:54:in ‘current’ app/views/weather_reports/show.html.erb:2 Started GET “/weather_reports” for ::1 at 2024-08-15 22:08:43 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.1ms)</pre>
+
+<p>Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)</p>
+
+<p>Started GET “/manifest.json” for ::1 at 2024-08-15 22:08:43 -0500 Processing by Rails::PwaController#manifest as JSON</p>
+
+<pre>Rendering pwa/manifest.json.erb
+Rendered pwa/manifest.json.erb (Duration: 0.1ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started POST “/weather_reports” for ::1 at 2024-08-15 22:08:55 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;[FILTERED]&quot;, &quot;address&quot;=&gt;&quot;2000 e arapaho rd, apt 21307, richardson tx 75081&quot;, &quot;commit&quot;=&gt;&quot;Search&quot;}</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports/21307">localhost:3000/weather_reports/21307</a> Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)</p>
+
+<p>Started GET “/weather_reports/21307” for ::1 at 2024-08-15 22:08:55 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;21307&quot;}</pre>
+
+<p>Completed 500 Internal Server Error in 605ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>TypeError (no implicit conversion of String into Integer):</p>
+
+<p>app/lib/weather_report_generator.rb:22:in ‘geocode!’ app/lib/weather_report_generator.rb:11:in ‘initialize’ app/lib/weather_report_generator.rb:6:in ‘new’ app/lib/weather_report_generator.rb:6:in ‘generate’ app/services/get_weather_report.rb:17:in ‘process’ app/services/get_weather_report.rb:6:in ‘process’ app/controllers/weather_reports_controller.rb:10:in ‘show’ Started GET “/weather_reports” for ::1 at 2024-08-15 22:09:23 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/manifest.json” for ::1 at 2024-08-15 22:09:23 -0500 Processing by Rails::PwaController#manifest as JSON</p>
+
+<pre>Rendering pwa/manifest.json.erb
+Rendered pwa/manifest.json.erb (Duration: 0.1ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/” for ::1 at 2024-08-15 22:09:23 -0500 Redirected to <a href="http://localhost:3000/weather_reports">localhost:3000/weather_reports</a> Completed 301 Moved Permanently in 0ms</p>
+
+<p>Started GET “/weather_reports” for ::1 at 2024-08-15 22:09:23 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started POST “/weather_reports” for ::1 at 2024-08-15 22:09:32 -0500 Processing by <a href="../WeatherReportsController.html#method-i-create"><code>WeatherReportsController#create</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;[FILTERED]&quot;, &quot;address&quot;=&gt;&quot;2000 e arapaho rd, apt 2137, richardson tx 75081&quot;, &quot;commit&quot;=&gt;&quot;Search&quot;}</pre>
+
+<p>Redirected to <a href="http://localhost:3000/weather_reports/75081">localhost:3000/weather_reports/75081</a> Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/weather_reports/75081” for ::1 at 2024-08-15 22:09:32 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as TURBO_STREAM</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;75081&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 997ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/weather_reports/75081” for ::1 at 2024-08-15 22:09:43 -0500 Processing by <a href="../WeatherReportsController.html#method-i-show"><code>WeatherReportsController#show</code></a> as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;75081&quot;}
+Rendering layout layouts/application.html.erb
+Rendering weather_reports/show.html.erb within layouts/application
+Rendered weather_reports/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/manifest.json” for ::1 at 2024-08-15 22:09:44 -0500 Processing by Rails::PwaController#manifest as JSON</p>
+
+<pre>Rendering pwa/manifest.json.erb
+Rendered pwa/manifest.json.erb (Duration: 0.1ms | GC: 0.0ms)</pre>
+
+<p>Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)</p>
+
+<p>Started GET “/” for ::1 at 2024-08-15 22:10:05 -0500 Redirected to <a href="http://localhost:3000/weather_reports">localhost:3000/weather_reports</a> Completed 301 Moved Permanently in 0ms</p>
+
+<p>Started GET “/weather_reports” for ::1 at 2024-08-15 22:10:05 -0500 Processing by <a href="../WeatherReportsController.html#method-i-index"><code>WeatherReportsController#index</code></a> as HTML</p>
+
+<pre>Rendering layout layouts/application.html.erb
+Rendering weather_reports/index.html.erb within layouts/application
+Rendered weather_reports/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.4ms)
+Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.7ms)</pre>
+
+<p>Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)</p>
+
 </main>
 
 

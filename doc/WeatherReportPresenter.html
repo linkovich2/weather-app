@@ -76,6 +76,7 @@
     <li ><a href="#method-i-cached-3F">#cached?</a>
     <li ><a href="#method-i-cached_at">#cached_at</a>
     <li ><a href="#method-i-cloud_coverage">#cloud_coverage</a>
+    <li ><a href="#method-i-current">#current</a>
     <li ><a href="#method-i-high">#high</a>
     <li ><a href="#method-i-low">#low</a>
     <li ><a href="#method-i-weather_blocks">#weather_blocks</a>
@@ -189,7 +190,7 @@
           <p>returns human readable time of caching</p>
 
           <div class="method-source-code" id="cached_at-source">
-            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 53</span>
+            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 58</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cached_at</span>
   <span class="ruby-identifier">weather_report</span>[<span class="ruby-value">:cached_at</span>].<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%l:%M%P %B %d, %Y Central Time&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -224,6 +225,29 @@
   <span class="ruby-keyword">else</span>
     <span class="ruby-string">&quot;Clear Skies&quot;</span>
   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-current" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">current</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>returns current temperature</p>
+
+          <div class="method-source-code" id="current-source">
+            <pre><span class="ruby-comment"># File app/presenters/weather_report_presenter.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">current</span>
+  <span class="ruby-identifier">weather_report</span>[<span class="ruby-string">&quot;current&quot;</span>][<span class="ruby-string">&quot;apparent_temperature&quot;</span>]
 <span class="ruby-keyword">end</span></pre>
           </div>
         </div>
@@ -294,7 +318,7 @@
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">weather_blocks</span>
   <span class="ruby-ivar">@weather_blocks</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arr</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">weather_report</span>[<span class="ruby-string">&quot;hourly&quot;</span>][<span class="ruby-string">&quot;time&quot;</span>].<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">time</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
-      <span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> { 
+      <span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> {
         <span class="ruby-value">time:</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">time</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%_m/%d %l:%M%P&quot;</span>),
         <span class="ruby-value">cloud_coverage:</span> <span class="ruby-identifier">cloud_coverage</span>(<span class="ruby-identifier">index</span>),
         <span class="ruby-value">precipitation_probability:</span> <span class="ruby-node">&quot;#{weather_report[&quot;hourly&quot;][&quot;precipitation_probability&quot;][index]}%&quot;</span>,

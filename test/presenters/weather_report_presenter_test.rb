@@ -25,4 +25,9 @@ class WeatherReportPresenterTest < ActiveSupport::TestCase
     instance = WeatherReportPresenter.new(meteo_report.deep_stringify_keys)
     assert_equal 21.4, instance.low
   end
+
+  test "#current returns current temperature" do
+    instance = WeatherReportPresenter.new(meteo_report.deep_stringify_keys)
+    assert_equal 67.2, instance.current
+  end
 end
